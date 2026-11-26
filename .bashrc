@@ -1,0 +1,1 @@
+/home/zuups/.bashrc

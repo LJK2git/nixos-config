@@ -17,6 +17,7 @@ SOURCES=(
   "$HOME/.config/kitty"
   "$HOME/.config/hyprlauncher"
   "$HOME/.config/fastfetch"
+  "$HOME/.config/.bashrc"   
 )
 
 cd "$REPO"
