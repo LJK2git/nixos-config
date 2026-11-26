@@ -13,11 +13,10 @@ SOURCES=(
   "$HOME/.config/hypr"
   "$HOME/.config/wallpapers"
   "$HOME/.config/waybar"
-  "$HOME/.config/nvim"
   "$HOME/.config/kitty"
   "$HOME/.config/hyprlauncher"
   "$HOME/.config/fastfetch"
-  "$HOME/.config/.bashrc"   
+  "$HOME/.bashrc"   
 )
 
 cd "$REPO"
