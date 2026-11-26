@@ -16,10 +16,22 @@ SOURCES=(
   "$HOME/.config/kitty"
   "$HOME/.config/hyprlauncher"
   "$HOME/.config/fastfetch"
-  "$HOME/.bashrc"   
+  "$HOME/.bashrc"
 )
 
 cd "$REPO"
+
+# put the symlinks back no matter how the script exits
+restore_links() {
+  for src in "${SOURCES[@]}"; do
+    src="${src%/}"
+    name=$(basename "$src")
+    [ -e "$src" ] || continue
+    rm -rf "./$name"
+    ln -s "$src" "./$name"
+  done
+}
+trap restore_links EXIT
 
 for src in "${SOURCES[@]}"; do
   src="${src%/}"
