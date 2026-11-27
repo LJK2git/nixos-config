@@ -13,8 +13,16 @@ alias network='speedtest-cli'
 alias speed='speedtest-cli'
 alias myip='curl -4 icanhazip.com'
 alias fix='sudo iw dev wlan0 set power_save off'
-alias rebuild='sudo nixos-rebuild switch --flake /etc/nixos#nixos'
+rebuild() {
+  if [[ "$1" == "-f" || "$1" == "--flake" ]]; then
+    shift
+    sudo nixos-rebuild switch --flake /etc/nixos#nixos "$@"
+  else
+    sudo nixos-rebuild switch "$@"
+  fi
+}
 alias dotfiles='bash ~/config/config-files.sh'
+alias search='nix-search'
 PS1='[\u@\h \W]\$ '
 
 fastfetch

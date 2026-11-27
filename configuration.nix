@@ -2,7 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, pkgs, unstable, ... }:
+{ config, pkgs, unstable, nixsearch, ... }:
 
 {
   imports =
@@ -130,6 +130,7 @@
 	kdePackages.isoimagewriter
 	magic-wormhole	
 	unstable.iloader
+  nixsearch
 	github-cli
 	helix
   ];
