@@ -21,6 +21,22 @@ rebuild() {
     sudo nixos-rebuild switch "$@"
   fi
 }
+delold() {
+  local profile="/nix/var/nix/profiles/system"
+  local gens
+  gens=$(sudo nix-env -p "$profile" --list-generations | awk '{print $1}' | head -n 10 | tr '\n' ' ')
+
+  if [[ -z "$gens" ]]; then
+    echo "No generations found."
+    return 1
+  fi
+
+  echo "Deleting generations: $gens"
+  sudo nix-env -p "$profile" --delete-generations $gens
+}
+gen() {
+  sudo nix-env -p /nix/var/nix/profiles/system --list-generations | wc -l
+}
 alias dotfiles='bash ~/config/config-files.sh'
 alias search='nix-search'
 PS1='[\u@\h \W]\$ '
