@@ -15,6 +15,7 @@ SOURCES=(
   "$HOME/.config/waybar"
   "$HOME/.config/kitty"
   "$HOME/.config/hyprlauncher"
+  "$HOME/.config/nvim"
   "$HOME/.config/fastfetch"
   "$HOME/.bashrc"
 )

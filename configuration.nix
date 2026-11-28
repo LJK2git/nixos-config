@@ -118,6 +118,7 @@
 	nerd-fonts.jetbrains-mono
 	nerd-fonts.symbols-only
 	vim
+	neovim
 	git
 	magic-wormhole
 	fastfetch
@@ -130,9 +131,9 @@
 	kdePackages.isoimagewriter
 	magic-wormhole	
 	unstable.iloader
-  nixsearch
+  	nixsearch
 	github-cli
-	helix
+  	zip
   ];
 
   # Fonts
