@@ -37,7 +37,7 @@ delold() {
 gen() {
   sudo nix-env -p /nix/var/nix/profiles/system --list-generations | wc -l
 }
-alias dotfiles='bash ~/config/config-files.sh'
+alias dotfiles='bash ~/config/script.sh'
 alias search='nix-search'
 PS1='[\u@\h \W]\$ '
 
