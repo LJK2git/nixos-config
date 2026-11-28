@@ -273,7 +273,7 @@ hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
-hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
+hl.bind(mainMod .. " + U", hl.dsp.layout("togglesplit"))    -- dwindle only
 hl.bind(mainMod .. " + V", hl.dsp.window.fullscreen({ mode = 1 }))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "fullscreen"}))
 hl.bind(mainMod .. " + E",  hl.dsp.exec_cmd("pkill -SIGUSR1 hyprexpose"))
@@ -285,15 +285,15 @@ hl.bind("ALT + 0", hl.dsp.exec_cmd("pkill waybar ; waybar"))
 -- Hyprpaper stuff
 
 -- Window Focus + Window Movement with arrow keys
-hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
-hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
-hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "up" }))
-hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
+hl.bind(mainMod .. " + H",  hl.dsp.focus({ direction = "left" }))
+hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))
+hl.bind(mainMod .. " + K",    hl.dsp.focus({ direction = "up" }))
+hl.bind(mainMod .. " + J",  hl.dsp.focus({ direction = "down" }))
 
-hl.bind(mainMod ..  "+ SHIFT" .. " + left",  hl.dsp.window.move({ direction = "left" }))
-hl.bind(mainMod ..  "+ SHIFT" .. " + right",  hl.dsp.window.move({ direction = "right" }))
-hl.bind(mainMod ..  "+ SHIFT" .. " + up",  hl.dsp.window.move({ direction = "up" }))
-hl.bind(mainMod ..  "+ SHIFT" .. " + down",  hl.dsp.window.move({ direction = "down" }))
+hl.bind(mainMod ..  "+ SHIFT" .. " + H",  hl.dsp.window.move({ direction = "left" }))
+hl.bind(mainMod ..  "+ SHIFT" .. " + L",  hl.dsp.window.move({ direction = "right" }))
+hl.bind(mainMod ..  "+ SHIFT" .. " + K",  hl.dsp.window.move({ direction = "up" }))
+hl.bind(mainMod ..  "+ SHIFT" .. " + J",  hl.dsp.window.move({ direction = "down" }))
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
